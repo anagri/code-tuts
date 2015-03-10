@@ -3,14 +3,18 @@ package com.shankara.bill;
 //https://gist.github.com/anagri/64888976de0b3bf8e29f
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Bill {
+    private final Store store;
+
     public static void main(String[] args) {
         Store store = new Store();
         store.add("Quaker", 1);
         store.add("Kellogs", 2);
         store.add("Milk", 4);
         store.add("Cashew", 5);
+
         Bill bill = new Bill(store);
         bill.add("Quaker", 10);
         bill.add("Kellogs", 5);
@@ -23,6 +27,7 @@ public class Bill {
     private final ArrayList<BillItem> billItems;
 
     public Bill(Store store) {
+        this.store = store;
         billItems = new ArrayList<>();
     }
 
@@ -36,7 +41,7 @@ public class Bill {
     }
 
     private void add(String name, int quantity) {
-        billItems.add(); //TODO
+        billItems.add(new BillItem(name, store.getPrice(name), quantity));
     }
 
     private static class BillItem {
@@ -60,8 +65,19 @@ public class Bill {
     }
 
     private static class Store {
-        public void add(String quaker, int price) {
-            // TODO
+
+        private final HashMap<String, Integer> priceChart;
+
+        public Store() {
+            priceChart = new HashMap<>();
+        }
+
+        public void add(String name, int price) {
+            priceChart.put(name, price);
+        }
+
+        public int getPrice(String name) {
+            return priceChart.get(name);
         }
     }
 }
