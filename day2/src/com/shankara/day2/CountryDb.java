@@ -24,4 +24,18 @@ public class CountryDb {
     public String capitalOf(String country) {
         return null;
     }
+
+//    public Iterator<CountryCapital> countryCapitalIterator() {
+//        return null;
+//    }
+//
+//    public static class CountryCapital {
+//        public final String country;
+//        public final String capital;
+//
+//        public CountryCapital(String country, String capital) {
+//            this.country = country;
+//            this.capital = capital;
+//        }
+//    }
 }
