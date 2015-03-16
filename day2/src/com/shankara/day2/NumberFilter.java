@@ -14,11 +14,11 @@ public class NumberFilter {
         return null;
     }
 
-    public Integer[] sum() {
+    public Integer sum() {
         return null;
     }
 
-    public Integer[] mult() {
+    public Integer mult() {
         return null;
     }
 }
