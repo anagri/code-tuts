@@ -17,4 +17,8 @@ public class NumberFilter {
     public Integer[] sum() {
         return null;
     }
+
+    public Integer[] mult() {
+        return null;
+    }
 }
