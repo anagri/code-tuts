@@ -13,10 +13,10 @@ public class MyCountryApp {
         }
 
         // part 2
-//        Iterator<CountryDb.CountryCapital> iterator1 = countryDb.countryCapitalIterator();
-//        while (iterator1.hasNext()) {
-//            CountryDb.CountryCapital item = iterator1.next();
-//            System.out.printf("Country " + item.country + " capital is " + item.capital);
-//        }
+        Iterator<CountryDb.CountryCapital> iterator1 = countryDb.countryCapitalIterator();
+        while (iterator1.hasNext()) {
+            CountryDb.CountryCapital item = iterator1.next();
+            System.out.println("Country " + item.country + " capital is " + item.capital);
+        }
     }
 }

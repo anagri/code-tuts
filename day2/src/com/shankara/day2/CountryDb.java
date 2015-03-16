@@ -43,17 +43,32 @@ public class CountryDb {
         return null;
     }
 
-//    public Iterator<CountryCapital> countryCapitalIterator() {
-//        return null;
-//    }
-//
-//    public static class CountryCapital {
-//        public final String country;
-//        public final String capital;
-//
-//        public CountryCapital(String country, String capital) {
-//            this.country = country;
-//            this.capital = capital;
-//        }
-//    }
+    public Iterator<CountryCapital> countryCapitalIterator() {
+        return new Iterator<CountryCapital>() {
+            private int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return index < db.length;
+            }
+
+            @Override
+            public CountryCapital next() {
+                String country = db[index];
+                String capital = db[index + 1];
+                index += 2;
+                return new CountryCapital(country, capital);
+            }
+        };
+    }
+
+    public static class CountryCapital {
+        public final String country;
+        public final String capital;
+
+        public CountryCapital(String country, String capital) {
+            this.country = country;
+            this.capital = capital;
+        }
+    }
 }
