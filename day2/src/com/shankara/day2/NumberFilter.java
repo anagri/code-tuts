@@ -2,19 +2,19 @@ package com.shankara.day2;
 
 public class NumberFilter {
 
-    public NumberFilter(int[] numbers) {
+    public NumberFilter(Integer[] numbers) {
 
     }
 
-    public int[] even() {
+    public Integer[] even() {
         return null;
     }
 
-    public int[] odd() {
+    public Integer[] odd() {
         return null;
     }
 
-    public int[] sum() {
+    public Integer[] sum() {
         return null;
     }
 }
