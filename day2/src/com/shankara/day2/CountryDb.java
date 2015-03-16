@@ -18,10 +18,28 @@ public class CountryDb {
     }
 
     public Iterator<String> countries() {
-        return null;
+        return new Iterator<String>() {
+            private int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return index < db.length;
+            }
+
+            @Override
+            public String next() {
+                String country = db[index];
+                index += 2;
+                return country;
+            }
+        };
     }
 
     public String capitalOf(String country) {
+        for (int i = 0; i < db.length; i += 2) {
+            String dbCountry = db[i];
+            if (dbCountry.equals(country)) return db[i + 1];
+        }
         return null;
     }
 }
