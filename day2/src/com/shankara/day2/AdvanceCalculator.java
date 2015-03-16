@@ -33,7 +33,7 @@ public class AdvanceCalculator {
         System.out.println("All answers are correct");
     }
 
-    private String total(String[] vals) {
+    public String total(String[] vals) {
         return null;
         //TODO - implement
     }
